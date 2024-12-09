@@ -1,10 +1,22 @@
+import Header from '@/components/Header'
+import Hero from '@/components/Hero'
+import Skills from '@/components/Skills'
+import Projects from '@/components/Projects'
+import Contact from '@/components/Contact'
+import Footer from '@/components/Footer'
+
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <h1>Portfolio</h1>
+    <div className="min-h-screen bg-gradient-to-b from-gray-900 to-gray-800 text-white">
+      <Header />
+      <main>
+        <Hero />
+        <Skills />
+        <Projects />
+        <Contact />
       </main>
-    
+      <Footer />
     </div>
-  );
+  )
 }
+
