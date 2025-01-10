@@ -1,32 +1,35 @@
-'use client'
+"use client";
 
-import { motion } from 'framer-motion'
-import Image from 'next/image'
-import { ExternalLink, Github } from 'lucide-react'
+import { motion } from "framer-motion";
+import Image from "next/image";
+import { ExternalLink, Github } from "lucide-react";
 
 const projects = [
   {
-    title: 'Project 1',
-    description: 'A brief description of Project 1 and its key features.',
-    image: '/placeholder.svg?height=200&width=300',
-    liveUrl: 'https://project1.com',
-    githubUrl: 'https://github.com/username/project1',
+    title: "North Marketplace",
+    description:
+      "A modern e-commerce platform that enables users to buy and sell products through a bidding system.",
+    image: "/images/p1.png",
+    liveUrl: "https://north-market.onrender.com/",
+    githubUrl: "https://github.com/sonpt-afk/north-martket",
   },
   {
-    title: 'Project 2',
-    description: 'A brief description of Project 2 and its key features.',
-    image: '/placeholder.svg?height=200&width=300',
-    liveUrl: 'https://project2.com',
-    githubUrl: 'https://github.com/username/project2',
+    title: "AI SEO Tools Landing Page",
+    description: `A modern, animated landing page to promote for an AI-powered tool`,
+    image: "/images/p4.png",
+    liveUrl:
+      "https://next-ai-startup-landingpage-2oeb02u34-kypro2000s-projects.vercel.app/",
+    githubUrl: "https://github.com/sonpt-afk/next-AI-startup-landingpage",
   },
   {
-    title: 'Project 3',
-    description: 'A brief description of Project 3 and its key features.',
-    image: '/placeholder.svg?height=200&width=300',
-    liveUrl: 'https://project3.com',
-    githubUrl: 'https://github.com/username/project3',
+    title: "Online Movie Trailer Viewer (Netflix Clone)",
+    description:
+      "A movie trailer collection website with the following features: registration, login, movie search, movie selection and playback, and viewing personal account information across multiple devices.",
+    image: "/images/p2.png",
+    liveUrl: "https://movie-webapp-cp34.vercel.app/",
+    githubUrl: "https://github.com/sonpt-afk/Movie-web",
   },
-]
+];
 
 const Projects = () => {
   return (
@@ -88,8 +91,7 @@ const Projects = () => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Projects
-
+export default Projects;

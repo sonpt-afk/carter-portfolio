@@ -1,14 +1,17 @@
-'use client'
+"use client";
 
-import { motion } from 'framer-motion'
-import { ArrowRight } from 'lucide-react'
-import Image from 'next/image'
-import AnimatedBackground from './AnimatedBackground'
-import { TypeAnimation } from 'react-type-animation'
+import { motion } from "framer-motion";
+import { ArrowRight } from "lucide-react";
+import Image from "next/image";
+import AnimatedBackground from "./AnimatedBackground";
+import { TypeAnimation } from "react-type-animation";
 
 const Hero = () => {
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center py-20 relative overflow-hidden">
+    <section
+      id="home"
+      className="min-h-screen flex items-center justify-center py-20 relative overflow-hidden"
+    >
       <AnimatedBackground />
       <div className="container mx-auto px-4 text-center relative z-10">
         <motion.div
@@ -31,7 +34,8 @@ const Hero = () => {
           transition={{ duration: 0.5, delay: 0.2 }}
           className="text-4xl md:text-6xl font-bold mb-6"
         >
-          Hi, I'm Carter
+          Hi, I'm Son Pham <br />
+          <span className="text-gray-400 text-lg">( aka Carter)</span>
         </motion.h1>
         <motion.div
           initial={{ opacity: 0, y: -20 }}
@@ -41,11 +45,11 @@ const Hero = () => {
         >
           <TypeAnimation
             sequence={[
-              'A developer building awesome websites',
+              "A developer building awesome websites",
               1000,
-              'A solo entrepreneur turning ideas into reality',
+              "A solo entrepreneur turning ideas into reality",
               1000,
-              'An AI enthusiast',
+              "An AI enthusiast",
               1000,
             ]}
             wrapper="span"
@@ -68,8 +72,7 @@ const Hero = () => {
         </motion.div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Hero
-
+export default Hero;
