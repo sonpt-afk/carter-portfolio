@@ -1,24 +1,37 @@
-'use client'
+"use client";
 
-import { useEffect, useState } from 'react'
-import { motion } from 'framer-motion'
-import { Code, Database, Globe, Server, Smartphone, Wifi } from 'lucide-react'
+import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
+import {
+  Code,
+  Database,
+  Globe,
+  Server,
+  Smartphone,
+  Wifi,
+  LucideIcon,
+} from "lucide-react";
 
-const icons = [Code, Database, Globe, Server, Smartphone, Wifi]
+const icons = [Code, Database, Globe, Server, Smartphone, Wifi];
 
-const AnimatedIcon = ({ Icon, initialPosition }) => {
-  const [position, setPosition] = useState(initialPosition)
+interface AnimatedIconProps {
+  Icon: LucideIcon;
+  initialPosition: { x: number; y: number };
+}
+
+const AnimatedIcon = ({ Icon, initialPosition }: AnimatedIconProps) => {
+  const [position, setPosition] = useState(initialPosition);
 
   useEffect(() => {
     const interval = setInterval(() => {
       setPosition({
         x: Math.random() * window.innerWidth,
         y: Math.random() * window.innerHeight,
-      })
-    }, Math.random() * 5000 + 5000)
+      });
+    }, Math.random() * 5000 + 5000);
 
-    return () => clearInterval(interval)
-  }, [])
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <motion.div
@@ -29,17 +42,17 @@ const AnimatedIcon = ({ Icon, initialPosition }) => {
     >
       <Icon size={32} />
     </motion.div>
-  )
-}
+  );
+};
 
 const AnimatedBackground = () => {
-  const [mounted, setMounted] = useState(false)
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    setMounted(true)
-  }, [])
+    setMounted(true);
+  }, []);
 
-  if (!mounted) return null
+  if (!mounted) return null;
 
   return (
     <div className="fixed inset-0 overflow-hidden pointer-events-none">
@@ -54,8 +67,7 @@ const AnimatedBackground = () => {
         />
       ))}
     </div>
-  )
-}
+  );
+};
 
-export default AnimatedBackground
-
+export default AnimatedBackground;
