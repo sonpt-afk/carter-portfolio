@@ -54,8 +54,8 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     if (!validateForm()) return;
-
     setIsSubmitting(true);
+
     try {
       const response = await emailjs.send(
         process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID!,
@@ -67,14 +67,21 @@ const Contact = () => {
         },
         process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY
       );
+
       if (response.status === 200) {
         showSuccessMsg();
+        setFormData({ name: "", email: "", message: "" });
+        setSubmitStatus({
+          type: "success",
+          message: "Message sent successfully!",
+        });
       } else {
         showFailMsg();
+        setSubmitStatus({ type: "error", message: "Failed to send message" });
       }
-      setFormData({ name: "", email: "", message: "" });
     } catch (error) {
-      toast(error);
+      showFailMsg();
+      setSubmitStatus({ type: "error", message: "Failed to send message" });
     } finally {
       setIsSubmitting(false);
     }
