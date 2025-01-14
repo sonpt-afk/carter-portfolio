@@ -21,7 +21,7 @@ const Hero = () => {
           className="mb-8"
         >
           <Image
-            src="/placeholder.svg?height=200&width=200"
+            src="/images/dev_ava.jpg"
             alt="Developer"
             width={200}
             height={200}
@@ -34,7 +34,7 @@ const Hero = () => {
           transition={{ duration: 0.5, delay: 0.2 }}
           className="text-4xl md:text-6xl font-bold mb-6"
         >
-          Hi, I'm Son Pham <br />
+          Hi, I&apos;m Son Pham <br />
           <span className="text-gray-400 text-lg">( aka Carter)</span>
         </motion.h1>
         <motion.div
@@ -57,19 +57,19 @@ const Hero = () => {
             repeat={Infinity}
           />
         </motion.div>
-        <motion.div
+        <motion.button // Changed from motion.a
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.6 }}
+          onClick={() => {
+            const contactSection = document.getElementById("contact");
+            contactSection?.scrollIntoView({ behavior: "smooth" });
+          }}
+          className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full inline-flex items-center transition duration-300"
         >
-          <a
-            href="#contact"
-            className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-full inline-flex items-center transition duration-300"
-          >
-            Get in touch
-            <ArrowRight className="ml-2" size={20} />
-          </a>
-        </motion.div>
+          Get in touch
+          <ArrowRight className="ml-2" size={20} />
+        </motion.button>
       </div>
     </section>
   );
