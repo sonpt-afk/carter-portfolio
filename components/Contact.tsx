@@ -80,6 +80,7 @@ const Contact = () => {
         setSubmitStatus({ type: "error", message: "Failed to send message" });
       }
     } catch (error) {
+      console.log(error);
       showFailMsg();
       setSubmitStatus({ type: "error", message: "Failed to send message" });
     } finally {
