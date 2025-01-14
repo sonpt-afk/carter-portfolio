@@ -91,7 +91,7 @@ const Contact = () => {
     <>
       <div className="mx-auto max-w-md " id="contact">
         <h2 className="text-3xl font-bold text-center mb-6">Contact Me</h2>
-        <form onSubmit={handleSubmit} className="space-y-6 mb-5">
+        <form onSubmit={handleSubmit} className="space-y-6 mb-5 p-3">
           <div>
             <label htmlFor="name" className="block text-sm font-medium mb-2">
               Name
