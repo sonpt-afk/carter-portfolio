@@ -150,21 +150,21 @@ const Hero = () => {
                 <Image
                   src="/images/dev_ava.jpg"
                   alt="Son Pham - Full Stack Developer"
-                  width={400}
-                  height={400}
-                  className="rounded-full border-4 border-brand-cyan shadow-2xl hover-lift"
+                  width={200}
+                  height={200}
+                  className="rounded-full border-2 border-brand-cyan shadow-2xl hover-lift"
                   priority
                 />
 
                 {/* Floating badge */}
                 <motion.div
-                  className="absolute -bottom-4 -right-4 px-6 py-3 glass-strong rounded-2xl border-2 border-brand-lime shadow-xl"
-                  animate={{ y: [0, -10, 0] }}
+                  className="absolute -bottom-2 -right-2 px-4 py-2 glass-strong rounded-xl border-2 border-brand-lime shadow-xl"
+                  animate={{ y: [0, -8, 0] }}
                   transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
                 >
                   <div className="flex items-center gap-2">
-                    <div className="w-3 h-3 bg-brand-lime rounded-full animate-pulse" />
-                    <span className="font-display font-semibold text-sm">
+                    <div className="w-2 h-2 bg-brand-lime rounded-full animate-pulse" />
+                    <span className="font-display font-semibold text-xs">
                       Open to work
                     </span>
                   </div>
