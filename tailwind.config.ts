@@ -49,13 +49,38 @@ export default {
   				'3': 'hsl(var(--chart-3))',
   				'4': 'hsl(var(--chart-4))',
   				'5': 'hsl(var(--chart-5))'
-  			}
+  			},
+  			// Custom brand colors
+  			'brand-cyan': 'hsl(var(--cyan))',
+  			'brand-coral': 'hsl(var(--coral))',
+  			'brand-lime': 'hsl(var(--lime))',
+  			'brand-indigo': 'hsl(var(--indigo))',
+  			'brand-purple': 'hsl(var(--purple))',
+  		},
+  		fontFamily: {
+  			display: ['Space Grotesk', 'system-ui', 'sans-serif'],
+  			sans: ['DM Sans', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'sans-serif'],
   		},
   		borderRadius: {
   			lg: 'var(--radius)',
   			md: 'calc(var(--radius) - 2px)',
   			sm: 'calc(var(--radius) - 4px)'
-  		}
+  		},
+  		animation: {
+  			'float': 'float 3s ease-in-out infinite',
+  			'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+  			'gradient': 'gradient 8s linear infinite',
+  		},
+  		keyframes: {
+  			float: {
+  				'0%, 100%': { transform: 'translateY(0px)' },
+  				'50%': { transform: 'translateY(-20px)' },
+  			},
+  			gradient: {
+  				'0%, 100%': { backgroundPosition: '0% 50%' },
+  				'50%': { backgroundPosition: '100% 50%' },
+  			},
+  		},
   	}
   },
   plugins: [require("tailwindcss-animate")],
