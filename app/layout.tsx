@@ -1,15 +1,10 @@
-import { Noto_Sans } from "next/font/google";
 import { Metadata } from "next";
 import { EmailProvider } from "@/components/EmailProvider";
 import "./globals.css";
-const notoSans = Noto_Sans({
-  subsets: ["latin"],
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
-});
 
 export const metadata: Metadata = {
-  title: "Son Pham Portfolio",
-  description: "Full Stack Developer Portfolio",
+  title: "Son Pham | Full Stack Developer",
+  description: "Creative full-stack developer crafting modern web experiences with React, Node.js, and cutting-edge tech.",
 };
 
 export default function RootLayout({
@@ -18,8 +13,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <body className={notoSans.className} suppressHydrationWarning>
+    <html lang="en" className="dark" suppressHydrationWarning>
+      <body suppressHydrationWarning>
         <EmailProvider>{children}</EmailProvider>
       </body>
     </html>
